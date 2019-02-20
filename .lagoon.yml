@@ -1,15 +1,11 @@
 docker-compose-yaml: docker-compose.yml
 
-project: wordpress-example
+project: wordpress-example-2
 endpoint: api-lagoon-master.lagoon.ch.amazee.io:31472
 api: api-lagoon-master.lagoon.ch.amazee.io:80
 
 tasks:
   post-rollout:
-    - run:
-        name: env variables
-        command: env
-        service: cli
     - run:
         name: install wordpress if not installed
         command: |
